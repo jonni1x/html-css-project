@@ -92,7 +92,7 @@ nav .burger-menu span {
     display: block;
     background-color: #fff;
     height: 2px;
-    width: 20px;
+    width: 30px;
 }
 
 nav .logo {
@@ -362,11 +362,11 @@ section.cards .card {
 section.cards .card h2 {
     color: #000;
     font-weight: 600;
-    width: 100%;
+    max-width: 100%;
 }
 
 section.cards .card p {
-    width: 90%;
+    width: 100%;
     text-align: center;
 }
 
@@ -624,6 +624,7 @@ section.blog .articles .article div:hover {
 
 footer {
     height: 615px;
+    width: 100%;
     padding: 96px 20px;
     background-color: #000;
     display: grid;
@@ -823,7 +824,6 @@ footer p:last-child a {
         display: none;
     }
     
-    
     section.hero aside {
         display: flex;
         justify-content: space-between;
@@ -972,6 +972,7 @@ footer p:last-child a {
     }
 
     footer {
+        width: 100% !important;
         height: 1018px;
         padding: 50px 20px 0px;
         background-color: #000;
@@ -1012,6 +1013,252 @@ footer p:last-child a {
     footer p:last-child a {
         text-decoration: none;
         color: var(--main-color);
+    }   
+}
+
+
+@media (max-width: 768px) {
+
+    section.hero {
+        width: 100%;
+    }
+
+    section.hero aside {
+        width: 100%;
+    }
+    
+    section.hero aside .description {
+        min-height: 0;
+        height: 26%;
+    }
+    
+    section.hero aside .description h1 {
+        font-size: 40px;
+        line-height: 44px;
+    }
+    
+    section.hero aside .page-numbers {
+        flex-direction: row;
+    }
+
+    section.about {
+        max-height: 110vh;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    section.about .about-description {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        height: 33%;
+    }
+    
+    section.about .about-description div {
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-right: 0;
+        padding: 20px;
+    }
+    
+    section.about .about-description div h2 {
+        color: #000;
+    }
+    
+    section.about .about-description div span {
+        display: block;
+        font-size: 15px;
+        color: var(--main-color);
+    }
+    
+    section.about .image {
+        width: 100%;
+        height: 33%;
+    }
+    
+    section.about .image img{
+        height: 550px;
+    }
+    
+    section.about .achievements {
+        justify-content: space-evenly;
+        flex-direction: column;
+        height: 587px;
+    }
+
+    section.offers {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    section.offers .image {
+        height: 500px;
+        width: 100%;
+        margin-top: 600px;
+    }
+    
+    section.offers .image img {
+        max-height: 500px;
+    }
+    
+    section.offers .offer-description {
+        width: 100%;
+    }
+    
+    section.offers .offer-description div {
+        width: 100% ;
+        height: 100%;
+        padding: 20px 0;
+    }
+
+    section.offers .offer-description div p {
+        min-width: 500px !important;
+    }
+
+    section.offers .offer-description div ul li {
+        min-width: 600px !important;
+    }
+    
+    section.offers .offer-description div ul li .circle {
+        width: 60px;
+    }
+    
+    section.offers .offer-description div ul li p {
+        width: 100%;
+    }
+
+    section.cards {
+        flex-wrap: wrap;
+        height: 1154px;
+    }
+    
+    section.cards .card {
+        width: 100%;
+    }
+    
+    section.work h3 {
+        width: 89%;
+    }
+    
+    section.work .filter-projects {
+        flex-wrap: wrap;
+    }
+    
+    section.work .filter-projects h2 {
+        width: 100%;
+    }
+    
+    section.work .filter-projects ul {
+        display: flex;
+        max-width: 100%;
+    }
+    
+    section.work .projects {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, 300px);
+        row-gap: 30px;
+    }
+    
+    section.work .projects .image img {
+        width: 100%;
+    }
+
+    section.blog {
+        height: 220vh;
+    }
+
+    section.blog .articles {
+        width: 100%;
+    }
+    
+    section.blog .articles .article {
+        width: 100%;
+        height: 388px;
+        margin: 0;
+    }
+    
+    section.blog .articles .article img{
+        height: 50%;
+    }
+
+    footer p:last-child {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 576px) {
+
+    section.hero aside {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    section.hero aside .description {
+        max-height: 50%;
+        height: 40%;
+        justify-content: space-between;
+    }
+
+    section.hero aside .description button {
+        width: 260px;
+        height: 52px;
+    }
+    
+    section.hero aside .description h1 {
+        color: #ffffff;
+        font-size: 40px;
+        line-height: 44px;
+    }
+    
+    section.hero aside .page-numbers {
+        margin: 0 0 0 30px;
+    }
+    
+    section.about .about-description div {
+        min-height: 770px;
+    }
+    
+    section.about .image {
+        height: 500px;
+        margin-top: -80px;
+    }
+    
+    section.about .image img{
+        height: 500px;
+        max-height: 500px;
+    }
+
+    section.offers .offer-description {
+        width: 1000px;
+        height: 100%;
+    }
+    
+    section.offers .offer-description .offer-d {
+        overflow: hidden;
+        min-height: 60px;
+        min-width: 83vw;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    section.clients {
+        margin: 60px 0;
+        padding-bottom: 112px;
+    }
+    
+    section.clients .client {
+        height: 460px;
+        max-width: 600px;
+        margin-bottom: 20px;
+        overflow-x: hidden;
+    }
+
+    section.clients .client p {
+        max-width: 70%;
     }
     
 }
