@@ -1219,7 +1219,12 @@ footer p:last-child a {
     }
     
     section.about .about-description div {
-        min-height: 770px;
+        min-height: 800px;
+        justify-content: center;
+    }
+    
+    section.about .about-description div p {
+        margin-bottom: 20px;
     }
     
     section.about .image {
