@@ -23,6 +23,9 @@ button {
     text-transform: uppercase;
     font-size: 11px;
     letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 h2 {
@@ -270,71 +273,79 @@ section.offers .image {
 
 section.offers .image img {
     object-fit: cover;
+    height: 750px;
     max-height: 750px;
     width: 100%;
 }
 
 section.offers .offer-description {
+    width: 50%;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-section.offers .offer-description div {
-    width: 403px;
-    height: 560px;
-    display: flex;
-    flex-direction: column;
+    align-items: flex-start;
     justify-content: space-around;
-    margin-left: 73px;
+    flex-direction: column;
+    padding: 30px 0 30px 70px;
 }
 
-section.offers .offer-description div h2 {
+section.offers .offer-description * {
+    margin-bottom: 10px;
+}
+
+section.offers .offer-description  h2 {
     color: #000;
     display: flex;
     flex-direction: column;
     line-height: 27px;
 }
 
-section.offers .offer-description div h2 span {
+section.offers .offer-description .description-p {
+    max-width: 80%;
+}
+
+section.offers .offer-description  h2 span {
     font-size: 15px;
     line-height: 27px;
     text-transform: uppercase;
     color: var(--main-color);
 }
 
-section.offers .offer-description div ul li {
+section.offers .offer-description  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+section.offers .offer-description  ul li {
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 65px;
-    width: 450px;
 }
 
-section.offers .offer-description div ul li .circle {
+section.offers .offer-description  ul li .circle {
     height: 50px;
     width: 50px;
     display: flex;
     align-items: center;
+    justify-content: center;
     background-color: #000;
     border-radius: 50%;
-    margin: 0;
     color: white;
 }
 
-section.offers .offer-description div ul li p {
+section.offers .offer-description  ul li p {
     display: flex;
     flex-direction: column;
+    margin: 0 0 0 10px;
 }
 
-section.offers .offer-description div ul li p span {
+section.offers .offer-description  ul li p span {
     font-weight: 700;
     color: #000;
     font-size: 18px;
 }
 
-section.offers .offer-description div ul li p span:last-child {
+section.offers .offer-description  ul li p span:last-child {
     font-size: 16px;
     line-height: 29px;
     color: var(--light-gray);
@@ -722,8 +733,8 @@ footer .question div .iconify {
 }
 
 footer p:last-child {
-    width: 800px;
-    margin-left: 220px;
+    width: 650px;
+    margin: 0 0 0 150px;
 }
 
 footer p:last-child a {
@@ -776,10 +787,6 @@ footer p:last-child a {
 
     section.offers .image img {
         height: 750px;
-    }
-
-    section.offers .offer-description div ul li {
-        margin: 20px 0 ;
     }
 
     section.cards .card {
@@ -887,28 +894,14 @@ footer p:last-child a {
     }
     
     section.offers .offer-description {
-        max-width: 50%;
+        
         height: 100%;
         padding: 20px 0 0 30px;
     }
     
-    section.offers .offer-description div {
-        max-width: 90%;
-        height: 100%;
-        margin-left: 0;
-    }
-    
-    section.offers .offer-description div ul li {
-        min-height: 65px;
-        max-width: 100%;
-    }
-    
-    section.offers .offer-description div ul li .circle {
-        width: 75px;
-    }
-    
-    section.offers .offer-description div ul li p {
+    section.offers .offer-description ul li p {
         padding: 0 20px;
+        width: 100%;
     }
 
     section.work .filter-projects {
@@ -1006,7 +999,7 @@ footer p:last-child a {
     }
     
     footer p:last-child {
-        width: 800px;
+        width: 650px;
         margin-left: 0;
     }
     
@@ -1075,7 +1068,7 @@ footer p:last-child a {
     
     section.about .image {
         width: 100%;
-        height: 33%;
+        height: 550px;
     }
     
     section.about .image img{
@@ -1094,40 +1087,23 @@ footer p:last-child a {
     }
     
     section.offers .image {
-        height: 500px;
+        height: 550px;
         width: 100%;
-        margin-top: 600px;
+        margin-top: 510px;
     }
     
     section.offers .image img {
-        max-height: 500px;
+        max-height: 100%;
     }
     
     section.offers .offer-description {
         width: 100%;
     }
+/* 
+    section.offers .offer-description * {
+        background-color: rgba(0, 0, 0, .4);
+    } */
     
-    section.offers .offer-description div {
-        width: 100% ;
-        height: 100%;
-        padding: 20px 0;
-    }
-
-    section.offers .offer-description div p {
-        min-width: 500px !important;
-    }
-
-    section.offers .offer-description div ul li {
-        min-width: 600px !important;
-    }
-    
-    section.offers .offer-description div ul li .circle {
-        width: 60px;
-    }
-    
-    section.offers .offer-description div ul li p {
-        width: 100%;
-    }
 
     section.cards {
         flex-wrap: wrap;
@@ -1217,10 +1193,13 @@ footer p:last-child a {
     section.hero aside .page-numbers {
         margin: 0 0 0 30px;
     }
-    
+
     section.about .about-description div {
         min-height: 800px;
+        display: flex;
         justify-content: center;
+        padding: 0;
+        margin-bottom: 200px;
     }
     
     section.about .about-description div p {
@@ -1229,7 +1208,7 @@ footer p:last-child a {
     
     section.about .image {
         height: 500px;
-        margin-top: -80px;
+        margin-top: -300px;
     }
     
     section.about .image img{
@@ -1238,16 +1217,8 @@ footer p:last-child a {
     }
 
     section.offers .offer-description {
-        width: 1000px;
-        height: 100%;
-    }
-    
-    section.offers .offer-description .offer-d {
-        overflow: hidden;
-        min-height: 60px;
-        min-width: 83vw;
         max-width: 100%;
-        overflow: hidden;
+        height: 100%;
     }
 
     section.clients {
@@ -1257,13 +1228,13 @@ footer p:last-child a {
     
     section.clients .client {
         height: 460px;
-        max-width: 600px;
+        width: auto;
+        max-width: 400px;
         margin-bottom: 20px;
-        overflow-x: hidden;
     }
 
     section.clients .client p {
         max-width: 70%;
     }
-    
+
 }
