@@ -50,13 +50,13 @@ p {
     line-height: 29px;
     color: var(--light-gray);
     font-weight: 400;
-    word-wrap: break-word;
 }
 
 section.hero {
     height: 100vh; 
-    background: url(/assets/images/main-bg.png) no-repeat;
+    background: url(/assets/images/main-bg1.webp) no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     position: relative;
 }
 
@@ -186,7 +186,7 @@ section.hero aside .page-numbers span {
     cursor: pointer;
 }
 
-section.hero aside .page-numbers span:first-child {
+section.hero aside .page-numbers span.active {
     color: var(--main-color);
 }
 
@@ -235,6 +235,7 @@ section.about .image img{
 section.about .achievements {
     background: url(/assets/images/main-bg.png) no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
